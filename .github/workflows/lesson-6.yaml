@@ -34,7 +34,8 @@ jobs:
     steps:
       - name: Dynamic Application Security Scan
         uses: zaproxy/action-baseline@v0.7.0
-        with:
+        with: 
+          docker_name: 'owasp/zap2docker-weekly'
           target: 'https://hangryhippo.quantic.host'
   acceptance_test:
     needs: [deploy]
